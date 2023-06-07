@@ -1,23 +1,18 @@
 import React from 'react';
 
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, SafeAreaView, Image} from 'react-native';
 
 const HomeScreen = () => {
     return (
-        <View style={styles.container}>
-            <Text>
-                HomeScreen
-            </Text>
-        </View>
+        <ScrollView>
+            <SafeAreaView>
+                <View style={{paddingHorizontal:24, flexDirection:"row", alignItems:"center", gap:8}}>
+                    <Image style={{width:52, aspectRatio:1}}></Image>
+                </View>
+            </SafeAreaView>
+        </ScrollView>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#ff22',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
+
 export default HomeScreen;
